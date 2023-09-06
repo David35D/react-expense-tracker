@@ -30,8 +30,16 @@ const ExpenseForm = () => {
         event.preventDefault();     // Prevent page reload on submit
         
         const expenseData = userInput;
-
         console.log(expenseData);
+
+        // Resetting the inputs for 2 way binding
+        setUserInput(
+            {        
+                enteredTitle: '',
+                enteredAmount: '',
+                enteredDate: ''
+            }
+        )
     };
 
     return (
@@ -39,15 +47,31 @@ const ExpenseForm = () => {
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Title</label>
-                    <input type="text" onChange={(event) => inputChangeHandler('title', event.target.value)} /> {/* Special syntax to allow more than one paramater */}
+                    <input 
+                        type="text" 
+                        onChange={(event) => inputChangeHandler('title', event.target.value)} /* Special syntax to allow more than one paramater */
+                        value={userInput.enteredTitle}  /* Special prop for 2-way binding */
+                    /> 
                 </div>
                 <div className="new-expense__control">
                     <label>Amount</label>
-                    <input type="number" min="0.01" step="0.01" onChange={(event) => inputChangeHandler('amount', event.target.value)} />
+                    <input 
+                        type="number" 
+                        min="0.01" 
+                        step="0.01" 
+                        onChange={(event) => inputChangeHandler('amount', event.target.value)}
+                        value={userInput.enteredAmount} 
+                    />
                 </div>
                 <div className="new-expense__control">
                     <label>Date</label>
-                    <input type="date" min="2019-01-01" max="2023-12-31" onChange={(event) => inputChangeHandler('date', event.target.value)} />
+                    <input 
+                        type="date" 
+                        min="2019-01-01"
+                        max="2023-12-31" 
+                        onChange={(event) => inputChangeHandler('date', event.target.value)} 
+                        value={userInput.enteredDate}
+                    />
                 </div>
             </div>
             <div className="new-expense__actions">
