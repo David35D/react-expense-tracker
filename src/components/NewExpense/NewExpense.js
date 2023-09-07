@@ -3,10 +3,23 @@ import ExpenseForm from './ExpenseForm';
 
 import './NewExpense.css';
 
-const NewExpense = () => {
+const NewExpense = (props) => {
+    const saveExpenseDataHandler = (enteredExpenseData) => {
+        const expenseData = {
+            ...enteredExpenseData,
+            id: Math.random().toString()
+        };
+        console.log('Data passed to NewExpense component: ');
+        console.log(expenseData);
+        console.log('Passing data to App.js');
+        props.onAddExpense(expenseData);
+    };
+
     return (
         <div className='new-expense'>
-            <ExpenseForm />
+            <ExpenseForm 
+                onSaveExpenseData={saveExpenseDataHandler}
+            />
         </div>
     );
 };

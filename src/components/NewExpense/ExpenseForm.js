@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     // Shared state with all the data in the form of an object.
     const [userInput, setUserInput] = useState({
         enteredTitle: '',
@@ -40,6 +40,7 @@ const ExpenseForm = () => {
                 enteredDate: ''
             }
         )
+        props.onSaveExpenseData(userInput);
     };
 
     return (

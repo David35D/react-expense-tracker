@@ -9,10 +9,17 @@ function App() {
     {title: 'Dotted Notebook', amount: 8.75, date: new Date (2023, 1, 8)},
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log('Expense data passed to App.js');
+    console.log(expense);
+  };
+
   return (
     <div>
       <h1>Expense Tracker</h1>
-      <NewExpense />
+      <NewExpense 
+        onAddExpense={addExpenseHandler}
+      />
       <Expenses 
         items={expenses}
       />
