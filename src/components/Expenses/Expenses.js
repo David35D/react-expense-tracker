@@ -14,8 +14,21 @@ const Expenses = (props) => {
     };
 
     const filteredExpenses = props.items.filter((expense) => {
-        return expense.date.getFullYear().toString() === filteredYear;
+        return expense.date.getFullYear().toString() === filteredYear; // .filter adds items if the condition is true
     })
+
+    let expensesContent = <p className="expenses-message">No expenses found</p>;
+
+    if (filteredExpenses.length > 0) {
+        expensesContent = filteredExpenses.map((expense) => (
+            <ExpenseItem
+            key={expense.id}
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}
+                />
+        ));
+    }
 
     return (
         <Card className='expenses'>
@@ -23,14 +36,7 @@ const Expenses = (props) => {
                 onChangeFilter={changeFilterHandler}
                 selected={filteredYear} // Setting up 2-way binding, makes default value display when app reloads
             />
-            {filteredExpenses.map((expense) => ( // the "expense" argument works as each of the expenses received from the props.items array
-                <ExpenseItem 
-                    key={expense.id}  // We need to add a key in order to make sure React knows which element it has to render/update
-                    title={expense.title}   // We access the properties we want from the array.
-                    amount={expense.amount}
-                    date={expense.date}
-                />
-            ))}
+            {expensesContent}
         </Card>
     )
 };
