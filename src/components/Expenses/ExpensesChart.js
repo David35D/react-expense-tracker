@@ -1,3 +1,6 @@
+// This component is responsible for rendering the Chart
+// Also serves as entry point for the data
+
 import React from "react";
 
 import Chart from "../Chart/Chart";

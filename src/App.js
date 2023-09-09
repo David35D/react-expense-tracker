@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import './App.css';
 
 /* 
  Defining DUMMY_EXPENSES outside of the App function, 
@@ -32,7 +33,7 @@ function App() {
 
   return (
     <div>
-      <h1>Expense Tracker</h1>
+      <h1 className="app-title">Expense Tracker</h1>
       <NewExpense 
         onAddExpense={addExpenseHandler}
       />
