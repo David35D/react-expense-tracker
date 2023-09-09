@@ -5,7 +5,7 @@ const ExpenseItem = ({title, amount, date}) => { // Destructuring the received p
     console.log('RECEIVED DATE IN EXPENSEITEM ', date);
 
     return (
-        <div className='expense-item'>
+        <li className='expense-item'>
             <ExpenseDate 
                 date={date}
             />
@@ -13,7 +13,7 @@ const ExpenseItem = ({title, amount, date}) => { // Destructuring the received p
                 <h2>{title}</h2>
                 <div className='expense-item__price'>${amount}</div>
             </div>
-        </div>
+        </li>
     )
 };
 
