@@ -12,7 +12,7 @@ import './App.css';
 */
 const DUMMY_EXPENSES = [
   {id: 0, title: 'Lenovo Legion 5 AMD', amount: 1199.99, date: new Date (2023, 9, 3)},
-  {id: 1, title: 'Xtrem Backpack', amount: 47.65, date: new Date (2023, 9, 23)},
+  {id: 1, title: 'Xtrem Backpack', amount: 47.65, date: new Date (2023, 12, 23)},
   {id: 2, title: 'Timberland Hiking Shoes', amount: 115.15, date: new Date (2023, 2, 6)},
   {id: 3, title: 'Dotted Notebook', amount: 8.75, date: new Date (2023, 1, 8)},
   {id: 4, title: 'Zara Tiger Stripe Camo Jacket', amount: 45.21, date: new Date (2020, 1, 8)},
