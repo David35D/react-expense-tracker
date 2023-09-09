@@ -31,7 +31,7 @@ const ExpenseForm = (props) => {
         
         const expenseData = {
             title: userInput.enteredTitle,
-            amount: userInput.enteredAmount,
+            amount: +userInput.enteredAmount, // Added + sign so that the amounts are added as numbers instead of strings
             date: new Date(userInput.enteredDate)
         };
         console.log(expenseData);
