@@ -1,7 +1,9 @@
 import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 
-const ExpenseItem = ({title, amount, date}) => {
+const ExpenseItem = ({title, amount, date}) => { // Destructuring the received props
+    console.log('RECEIVED DATE IN EXPENSEITEM ', date);
+
     return (
         <div className='expense-item'>
             <ExpenseDate 

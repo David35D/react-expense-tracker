@@ -13,16 +13,18 @@ const Expenses = (props) => {
         setFilteredYear(selectedYear);
     };
 
+    console.log('Received data in EXPENSES.JS ',props.items);
+
     return (
         <Card className='expenses'>
             <ExpensesFilter 
                 onChangeFilter={changeFilterHandler}
                 selected={filteredYear} // Setting up 2-way binding, makes default value display when app reloads
             />
-            {props.items.map((expense) => (
+            {props.items.map((expense) => ( // the "expense" argument works as each of the expenses received from the props.items array
                 <ExpenseItem 
-                    key={expense.id}
-                    title={expense.title}
+                    key={expense.id}  // We need to add a key in order to make sure React knows which element it has to render/update
+                    title={expense.title}   // We access the properties we want from the array.
                     amount={expense.amount}
                     date={expense.date}
                 />

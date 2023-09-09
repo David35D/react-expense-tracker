@@ -1,10 +1,13 @@
 import './ExpenseDate.css';
 
-const ExpenseDate = ({date}) => {
+const ExpenseDate = (props) => {
+    console.log('RECEIVED DATE IN EXPENSEDATE ', props.date);
+
+
     // Parsing the date object into the desired format
-    const month = date.toLocaleString('en-US', {month: 'long'});
-    const day = date.toLocaleString('en-US', {day: '2-digit'});
-    const year = date.getFullYear();
+    const month = props.date.toLocaleString('en-US', {month: 'long'});
+    const day = props.date.toLocaleString('en-US', {day: '2-digit'});
+    const year = props.date.getFullYear();
 
     return (
         <div className='expense-date'>
