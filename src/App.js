@@ -29,10 +29,10 @@ const DUMMY_EXPENSES = [
   {id: 15, title: 'Samsung QLED QN90A', amount: 1999.99, date: new Date(2022, 10, 22)},
   {id: 16, title: 'Fitbit Charge 5', amount: 179.99, date: new Date(2022, 9, 17)},
   {id: 17, title: 'Apple AirPods Pro', amount: 249.99, date: new Date(2022, 8, 8)},
-  {id: 18, title: 'Sony WH-1000XM4', amount: 349.99, date: new Date(2022, 7, 3)},
-  {id: 19, title: 'Xbox Series X', amount: 499.99, date: new Date(2022, 6, 22)},
-  {id: 20, title: 'Nikon Z7 II', amount: 2999.99, date: new Date(2022, 5, 18)},
-  {id: 21, title: 'HP Spectre x360', amount: 1399.99, date: new Date(2022, 4, 10)},
+  {id: 18, title: 'Sony WH-1000XM4', amount: 349.99, date: new Date(2019, 7, 3)},
+  {id: 19, title: 'Xbox Series X', amount: 499.99, date: new Date(2019, 6, 22)},
+  {id: 20, title: 'Nikon Z7 II', amount: 2999.99, date: new Date(2019, 5, 18)},
+  {id: 21, title: 'HP Spectre x360', amount: 1399.99, date: new Date(2019, 4, 10)},
   {id: 22, title: 'Sony A7R IV', amount: 2999.99, date: new Date(2022, 3, 5)},
   {id: 23, title: 'Google Pixel 6 Pro', amount: 899.99, date: new Date(2022, 2, 1)}
 ]
