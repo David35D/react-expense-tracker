@@ -25,10 +25,20 @@ const NewExpense = (props) => {
         props.onAddExpense(expenseData);
     };
 
+    const clearAllHandler = () => {
+        props.onClearAll();
+    }
+
     return (
         <div className='new-expense'>
-            {!isAdding ? <button onClick={startAddingHandler}>Add New Expense</button> 
-                : <ExpenseForm 
+            {!isAdding 
+                ?
+                    <>
+                        <button onClick={startAddingHandler}>Add New Expense</button> 
+                        <button onClick={clearAllHandler}>Clear All</button> 
+                    </>
+                : 
+                    <ExpenseForm 
                         onSaveExpenseData={saveExpenseDataHandler}
                         onCancel={cancelAddingHandler}
                     />

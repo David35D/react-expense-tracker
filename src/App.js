@@ -45,6 +45,10 @@ function App() {
       return [expense, ...prevExpenses];
     });
   };
+
+  const clearAllHandler = () => {
+    setExpenses([]);
+  };
   
   console.log('UPDATED EXPENSES: ', expenses);
 
@@ -53,6 +57,7 @@ function App() {
       <h1 className="app-title">Expense Tracker</h1>
       <NewExpense 
         onAddExpense={addExpenseHandler}
+        onClearAll={clearAllHandler}
       />
       <Expenses 
         items={expenses}
